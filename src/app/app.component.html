@@ -1,0 +1,11 @@
+<app-nav (myEvent)="view($event)"></app-nav>
+@if(page == "home"){
+  <app-home></app-home>
+}
+@else if (page == "products") {
+  <app-products></app-products>
+}
+@else if (page == "movies") {
+  <app-site></app-site>
+}
+<app-footer></app-footer>

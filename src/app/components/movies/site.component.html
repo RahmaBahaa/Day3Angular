@@ -1,0 +1,47 @@
+<body class="bg-light p-4">
+
+  <div class="container">
+    <h2 class="mb-3">Add a Movie</h2>
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <input type="text" id="title" class="form-control" placeholder="Movie Title" [(ngModel)]="newMovie.name">
+      </div><br>
+      <div class="col-md-6">
+        <input type="text" id="description" class="form-control" placeholder="Description" [(ngModel)]="newMovie.description">
+      </div><br>
+      <div class="col-md-6">
+        <input type="number" id="rating" class="form-control" placeholder="Rating (1-10)" min="1" max="10" [(ngModel)]="newMovie.rate">
+      </div><br>
+      <div class="col-md-6">
+        <input type="text" id="image" class="form-control" placeholder="Image URL" [(ngModel)]="newMovie.image">
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100" (click)="addMovie()">Add</button>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Movies List</h3>
+    <input type="text" id="search" class="form-control w-50" placeholder="Search by title..." (input)="filterMovies()" [(ngModel)]="movieName" >
+
+    <div class="row mt-5" id="movies-container">
+      @for (movie of filterList; track $index) {
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src={{movie.image}} class="card-img-top" alt="{{ movie.name }}" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">{{ movie.name }}</h5>
+              <p class="card-text">{{ movie.description }}</p>
+              <p class="text-muted">Rating: {{ movie.rate }}/10</p>
+              <div class="row mt-3">
+                <div class="col-md-2">
+                  <button class="btn btn-danger" (click)="deleteMovie($index)">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>

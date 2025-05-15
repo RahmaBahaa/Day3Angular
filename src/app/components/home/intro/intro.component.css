@@ -1,0 +1,72 @@
+
+section{
+  padding: 85px;
+}
+h2{
+  font-weight: 700;
+}
+.experience_section .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.experience_section .detail-box p {
+  margin-top: 20px;
+}
+
+.experience_section .detail-box .btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 45px -5px 0 -5px;
+}
+
+.experience_section .detail-box .btn-box a {
+  text-align: center;
+  width: 165px;
+  font-size: 15px;
+  margin: 5px;
+}
+
+.experience_section .detail-box .btn-box .btn-1 {
+  display: inline-block;
+  padding: 10px 0;
+  background-color: #ff4f5a;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+.experience_section .detail-box .btn-box .btn-1:hover {
+  background-color: transparent;
+  border-color: #ff4f5a;
+  color: #ff4f5a;
+}
+
+.experience_section .detail-box .btn-box .btn-2 {
+  display: inline-block;
+  padding: 10px 0;
+  background-color: #1a2e35;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+.experience_section .detail-box .btn-box .btn-2:hover {
+  background-color: transparent;
+  border-color: #1a2e35;
+  color: #1a2e35;
+}
+
+.experience_section .img-box img {
+  width: 100%;
+}
+
+
